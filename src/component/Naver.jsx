@@ -29,13 +29,13 @@ const Naver = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink>Home</NavLink>
+              <NavLink >Home</NavLink>
             </li>
             <li>
-              <NavLink> Plants</NavLink>
+              <NavLink > Plants</NavLink>
             </li>
             <li>
-              <NavLink>My Profile</NavLink>
+              <NavLink >My Profile</NavLink>
             </li>
           </ul>
         </div>
@@ -44,13 +44,13 @@ const Naver = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink>Home</NavLink>
+            <NavLink >Home</NavLink>
           </li>
           <li>
-            <NavLink> Plants</NavLink>
+            <NavLink > Plants</NavLink>
           </li>
           <li>
-            <NavLink>My Profile</NavLink>
+            <NavLink >My Profile</NavLink>
           </li>
         </ul>
       </div>
