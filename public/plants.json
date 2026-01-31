@@ -1,0 +1,98 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "image": "https://images.pexels.com/photos/2123482/pexels-photo-2123482.jpeg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Monstera Deliciosa",
+    "category": "Tropical",
+    "price": 45,
+    "rating": 4.9,
+    "availableStock": 5,
+    "careLevel": "Moderate",
+    "description": "Known for its iconic split leaves, this 'Swiss Cheese Plant' adds a bold tropical feel.",
+    "image": "https://images.pexels.com/photos/6597437/pexels-photo-6597437.jpeg",
+    "providerName": "Leafy Lux"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Trees",
+    "price": 65,
+    "rating": 4.5,
+    "availableStock": 3,
+    "careLevel": "Hard",
+    "description": "A popular statement plant with large, violin-shaped leaves that prefers consistent light.",
+    "image": "https://www.thespruce.com/thmb/04Dej-WMhZCGiIpYS-3Sz7nzeDw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/grow-fiddle-leaf-fig-indoors-1902756-hero-feca31e64e91430794e2bdcc9fa1e901.jpg",
+    "providerName": "The Plant Collective"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Pothos",
+    "category": "Vines",
+    "price": 12,
+    "rating": 4.7,
+    "availableStock": 25,
+    "careLevel": "Easy",
+    "description": "A fast-growing vine that is incredibly easy to propagate and thrives in almost any condition.",
+    "image": "https://images.pexels.com/photos/7663986/pexels-photo-7663986.jpeg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 22,
+    "rating": 4.6,
+    "availableStock": 12,
+    "careLevel": "Moderate",
+    "description": "Features elegant white blooms and dark green leaves; excellent at filtering indoor toxins.",
+    "image": "https://images.pexels.com/photos/6208086/pexels-photo-6208086.jpeg",
+    "providerName": "Bloom & Root"
+  },
+  {
+    "plantId": 6,
+    "plantName": "ZZ Plant",
+    "category": "Air Purifier",
+    "price": 28,
+    "rating": 4.9,
+    "availableStock": 15,
+    "careLevel": "Easy",
+    "description": "Waxy, green leaves that can survive weeks of neglect and very low light levels.",
+    "image": "https://d3k81ch9hvuctc.cloudfront.net/company/T8EXmi/images/bba076ce-213d-4023-b9a8-7d1383f7effa.jpeg",
+    "providerName": "Leafy Lux"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 15,
+    "rating": 4.4,
+    "availableStock": 20,
+    "careLevel": "Easy",
+    "description": "Produces 'pups' that hang down like spiders; very safe for households with pets.",
+    "image": "https://images.pexels.com/photos/4603327/pexels-photo-4603327.jpeg",
+    "providerName": "The Plant Collective"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Calathea",
+    "category": "Foliage",
+    "price": 32,
+    "rating": 4.3,
+    "availableStock": 8,
+    "careLevel": "Hard",
+    "description": "Features striking patterns and purple undersides; leaves move up and down based on light.",
+    "image": "https://www.thespruce.com/thmb/S9r8nL7VRNW6K7Je2l7eLlpOg9w=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/SPR-grow-calathea-indoors-1902745-hero-ec9ad66c01b74dca97ea02e167b6a660.jpg",
+    "providerName": "Bloom & Root"
+  }
+]
