@@ -8,7 +8,8 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element:<HomePage></HomePage>
+        element: <HomePage></HomePage>,
+        loader:()=>fetch('/plants.json'),
       }
     ]
   },

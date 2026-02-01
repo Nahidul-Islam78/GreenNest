@@ -1,9 +1,15 @@
 import React from 'react';
+import Hero from '../component/Hero';
+import { useLoaderData } from 'react-router';
 
 const HomePage = () => {
+  const data = useLoaderData();
+  console.log(data);
   return (
-    <div className='min-h-screen'>
-      <p>i'm home</p>
+    <div >
+      <section className="hero ">
+        <Hero ></Hero>
+      </section>
     </div>
   );
 };

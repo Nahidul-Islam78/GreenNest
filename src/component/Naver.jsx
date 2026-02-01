@@ -29,13 +29,13 @@ const Naver = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink >Home</NavLink>
+              <NavLink className=" hover:bg-[#F3EEEA]">Home</NavLink>
             </li>
             <li>
-              <NavLink > Plants</NavLink>
+              <NavLink className="hover:bg-[#F3EEEA]"> Plants</NavLink>
             </li>
             <li>
-              <NavLink >My Profile</NavLink>
+              <NavLink className="hover:bg-[#F3EEEA]">My Profile</NavLink>
             </li>
           </ul>
         </div>
@@ -44,18 +44,20 @@ const Naver = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink >Home</NavLink>
+            <NavLink className="hover:bg-[#F3EEEA]">Home</NavLink>
           </li>
           <li>
-            <NavLink > Plants</NavLink>
+            <NavLink className="hover:bg-[#F3EEEA]"> Plants</NavLink>
           </li>
           <li>
-            <NavLink >My Profile</NavLink>
+            <NavLink className="hover:bg-[#F3EEEA]">My Profile</NavLink>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <NavLink className="btn">Login</NavLink>
+        <NavLink className="btn bg-black text-[#ffffff] hover:bg-[#F3EEEA] hover:text-black ">
+          Login
+        </NavLink>
       </div>
     </div>
   );
