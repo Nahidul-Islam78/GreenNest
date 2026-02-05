@@ -1,16 +1,17 @@
 import React from 'react';
 import { FaDollarSign } from 'react-icons/fa';
 import { IoIosStarHalf } from 'react-icons/io';
+import { Link } from 'react-router';
 
 const TopPlant = ({plant}) => {
-  const { plantName, image, price, rating } = plant;
+  const {plantId, plantName, image, price, rating } = plant;
   return (
     <div className="card bg-base-100 w-96 shadow-sm ">
       <figure className="px-10 pt-10">
         <img
           src={image}
           alt="Shoes"
-          className="rounded-xl w-56 h-56 shadow-sm"
+          className="rounded-xl w-56 h-56 "
         />
       </figure>
       <div className="card-body items-center text-center">
@@ -30,9 +31,9 @@ const TopPlant = ({plant}) => {
           </div>
         </div>
         <div className="card-actions">
-          <button className="btn bg-black text-[#ffffff] hover:bg-[#F3EEEA] hover:text-black ">
+          <Link to={`/details/${plantId}`} className="btn bg-black text-[#ffffff] hover:bg-[#F3EEEA] hover:text-black ">
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

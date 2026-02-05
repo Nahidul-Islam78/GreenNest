@@ -19,23 +19,30 @@ import HeroSlide3 from './heroSlide/HeroSlide3';
 const Hero = () => {
   
   return (
+
     <Swiper
-      spaceBetween={30}
-      centeredSlides={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Autoplay, Pagination]}
-      className="mySwiper"
-    >
-      <SwiperSlide><HeroSlide1></HeroSlide1></SwiperSlide>
-      <SwiperSlide><HeroSlide2></HeroSlide2></SwiperSlide>
-      <SwiperSlide><HeroSlide3></HeroSlide3></SwiperSlide> 
-    </Swiper>
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <HeroSlide1></HeroSlide1>
+        </SwiperSlide>
+        <SwiperSlide>
+          <HeroSlide2></HeroSlide2>
+        </SwiperSlide>
+        <SwiperSlide>
+          <HeroSlide3></HeroSlide3>
+        </SwiperSlide>
+      </Swiper>
   );
 };
 

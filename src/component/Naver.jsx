@@ -44,7 +44,7 @@ const Naver = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink className="hover:bg-[#F3EEEA]">Home</NavLink>
+            <NavLink to='/' className="hover:bg-[#F3EEEA]">Home</NavLink>
           </li>
           <li>
             <NavLink className="hover:bg-[#F3EEEA]"> Plants</NavLink>
@@ -55,7 +55,7 @@ const Naver = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <NavLink className="btn bg-black text-[#ffffff] hover:bg-[#F3EEEA] hover:text-black ">
+        <NavLink to='/auth/login' className="btn bg-black text-[#ffffff] hover:bg-[#F3EEEA] hover:text-black ">
           Login
         </NavLink>
       </div>

@@ -4,7 +4,7 @@ const PlantsTips = () => {
   return (
     <div>
       <p className="text-5xl font-bold text-center">Plant Care Tips</p>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 my-6 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 my-6 ">
         <div className="tips-card1">
           <div className="card bg-base-100 w-96 h-full shadow-sm">
             <figure>
