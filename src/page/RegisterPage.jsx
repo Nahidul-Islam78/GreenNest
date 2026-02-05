@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const RegisterPage = () => {
-  const { createUser } = use(AuthContext);
+  const { createUser,setUser } = use(AuthContext);
   // console.log(createUser);
   const handelRegister = (e) => {
     e.preventDefault();
@@ -15,6 +15,7 @@ const RegisterPage = () => {
         // Signed up
         const user = userCredential.user;
         console.log(user)
+        setUser(user)
       })
       .catch(error => {
         

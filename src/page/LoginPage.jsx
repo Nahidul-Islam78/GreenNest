@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const LoginPage = () => {
-  const { signinUser } = use(AuthContext);
+  const { signinUser ,setUser} = use(AuthContext);
   const handelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -11,7 +11,7 @@ const LoginPage = () => {
     signinUser(email, password).then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    console.log(user)
+      console.log(user)
   })
   .catch((error) => {
     
