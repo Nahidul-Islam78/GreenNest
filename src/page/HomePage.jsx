@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import Hero from '../component/Hero';
 import { useLoaderData } from 'react-router';
 import TopPlants from '../component/TopPlants';

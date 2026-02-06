@@ -1,9 +1,14 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { Slide, toast, ToastContainer } from 'react-toastify';
 
 const LoginPage = () => {
-  const { signinUser ,setUser} = use(AuthContext);
+  
+  const location = useLocation();
+  console.log(location);
+  const navigate = useNavigate();
+  const { signinUser, googleSignin} = use(AuthContext);
   const handelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -11,13 +16,24 @@ const LoginPage = () => {
     signinUser(email, password).then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-      console.log(user)
+      console.log(user);
+      navigate(`${location.state?location.state:"/"}`)
   })
   .catch((error) => {
     
     const errorMessage = error.message;
     console.log(errorMessage)
+    toast.error(error.message);
   });
+  }
+  const loginGoogle = () => {
+    googleSignin().then((res) => {
+      console.log(res.user);
+      navigate(`${location.state ? location.state : '/'}`);
+    }).catch((error) => {
+      console.log(error.message)
+      
+    })
   }
 
   return (
@@ -61,7 +77,10 @@ const LoginPage = () => {
           </p>
         </form>
         <div className="login-google ">
-          <button className="btn w-full bg-white text-black border-[#e5e5e5]">
+          <button
+            onClick={loginGoogle}
+            className="btn w-full bg-white text-black border-[#e5e5e5]"
+          >
             <svg
               aria-label="Google logo"
               width="16"
@@ -92,6 +111,19 @@ const LoginPage = () => {
             Login with Google
           </button>
         </div>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition={Slide}
+        />
       </div>
     </div>
   );

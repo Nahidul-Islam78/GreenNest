@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../component/Header';
 import { Outlet } from 'react-router';
 import Footer from '../component/Footer';
+import { Slide, ToastContainer } from 'react-toastify';
 
 const AuthLayout = () => {
   return (
@@ -15,6 +16,7 @@ const AuthLayout = () => {
       <footer>
         <Footer></Footer>
       </footer>
+      
     </div>
   );
 };
