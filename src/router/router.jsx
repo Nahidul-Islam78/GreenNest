@@ -7,6 +7,7 @@ import LoginPage from '../page/LoginPage';
 import RegisterPage from '../page/RegisterPage';
 import ProfilePage from '../page/ProfilePage';
 import PrivetRoute from '../provider/PrivetRoute';
+import Loading from '../component/Loading';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
         index: true,
         element: <HomePage></HomePage>,
         loader: () => fetch('/plants.json'),
+        hydrateFallbackElement:<Loading></Loading>
       },
       {
         path: '/details/:id',
@@ -25,6 +27,7 @@ export const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: () => fetch('/plants.json'),
+        hydrateFallbackElement:<Loading></Loading>
       },
       {
         path: '/profile',
