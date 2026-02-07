@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { Slide, toast, ToastContainer } from 'react-toastify';
@@ -8,7 +8,8 @@ const LoginPage = () => {
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
-  const { signinUser, googleSignin} = use(AuthContext);
+  const emailRef=useRef()
+  const { signinUser, googleSignin, forgetPassword } = use(AuthContext);
   const handelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -35,6 +36,13 @@ const LoginPage = () => {
       
     })
   }
+  const handelPassword = () => {
+    const email = emailRef.current.value;
+    console.log(email)
+    forgetPassword(email).then(() => {
+      alert("checked your email account")
+    }).catch()
+  }
 
   return (
     <div className="flex justify-center items-center my-8">
@@ -46,6 +54,7 @@ const LoginPage = () => {
           <fieldset className="fieldset">
             <label className="label font-bold">Email address</label>
             <input
+              ref={emailRef}
               name="email"
               type="email"
               className="input"
@@ -61,7 +70,7 @@ const LoginPage = () => {
               required
             />
             <div>
-              <a className="link link-hover">Forgot password?</a>
+              <a onClick={handelPassword} className="link link-hover">Forgot password?</a>
             </div>
             <button type="submit" className="btn btn-neutral mt-4">
               Login

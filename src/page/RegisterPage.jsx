@@ -1,16 +1,24 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { Slide, toast, ToastContainer,} from 'react-toastify';
 
 const RegisterPage = () => {
-  const { createUser,setUser} = use(AuthContext);
+  const { createUser, setUser } = use(AuthContext);
+  const [error,setError]=useState("")
   const navigate = useNavigate();
   // console.log(createUser);
   const handelRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+
+    const passwordPattern =
+      /^(?=.*[A-z])(?=.*[a-z]).{6,}$/;
+    if (!passwordPattern.test(password)) {
+      setError('passWord is invalid!!');
+      return;
+    }
     //console.log(email, password);
     createUser(email, password)
       .then(userCredential => {
@@ -71,6 +79,7 @@ const RegisterPage = () => {
                 placeholder="Password"
                 required
               />
+              {error && <p>{error}</p>}
               <p className="text-red-500"></p>
               <label className="label">
                 <input type="checkbox" className="checkbox" />
