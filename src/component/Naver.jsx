@@ -71,7 +71,7 @@ const Naver = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center gap-2">
-            <CgProfile className="h-12 w-full" />
+           {user?<img className='h-12 w-fit rounded-full' src={user.photoURL}></img>: <CgProfile className="h-12 w-full" />}
             <div>
               <details className="dropdown ">
                 <summary className="btn bg-black text-[#ffffff] hover:bg-[#F3EEEA] hover:text-black ">{user.displayName }</summary>
