@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 
 const ProfilePage = () => {
-  const { user, updateUser, setUser } = useContext(AuthContext);
+  const { user, updateUser, setUser, } = useContext(AuthContext);
   const updateName = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -30,8 +30,13 @@ const ProfilePage = () => {
       .catch();
   }
   return (
-    <div>
-      <div className="dropdown dropdown-hover">
+    <div className='min-h-screen'>
+      <div className="flex justify-center items-center flex-col gap-5">
+        <p>Name :{user.displayName}</p>
+        <p>Email :{user.email}</p>
+        <img className="rounded-full" src={user.photoURL} alt="" />
+      </div>
+      <div className="dropdown dropdown-hover flex justify-center items-center flex-col gap-5 mt-4">
         <div tabIndex={0} role="button" className="btn m-1">
           Update Profile
         </div>
