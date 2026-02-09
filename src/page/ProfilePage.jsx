@@ -34,7 +34,7 @@ const ProfilePage = () => {
       <div className="flex justify-center items-center flex-col gap-5">
         <p>Name :{user.displayName}</p>
         <p>Email :{user.email}</p>
-        <img className="rounded-full" src={user.photoURL} alt="" />
+        <img className="rounded-full h-24" src={user.photoURL} alt="" />
       </div>
       <div className="dropdown dropdown-hover flex justify-center items-center flex-col gap-5 mt-4">
         <div tabIndex={0} role="button" className="btn m-1">
